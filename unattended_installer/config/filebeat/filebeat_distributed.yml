@@ -1,0 +1,38 @@
+# Cyware - Filebeat configuration file
+output.elasticsearch:
+  protocol: https
+  username: ${username}
+  password: ${password}
+  ssl.certificate_authorities:
+    - /etc/filebeat/certs/root-ca.pem
+  ssl.certificate: "/etc/filebeat/certs/filebeat.pem"
+  ssl.key: "/etc/filebeat/certs/filebeat-key.pem"
+setup.template.json.enabled: true
+setup.template.json.path: '/etc/filebeat/cyware-template.json'
+setup.template.json.name: 'cyware'
+setup.ilm.overwrite: true
+setup.ilm.enabled: false
+
+filebeat.modules:
+  - module: cyware
+    alerts:
+      enabled: true
+    archives:
+      enabled: false
+
+logging.level: info
+logging.to_files: true
+logging.files:
+  path: /var/log/filebeat
+  name: filebeat
+  keepfiles: 7
+  permissions: 0644
+
+logging.metrics.enabled: false
+
+seccomp:
+  default_action: allow
+  syscalls:
+  - action: allow
+    names:
+    - rseq

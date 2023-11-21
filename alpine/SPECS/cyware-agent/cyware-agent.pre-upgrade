@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# add something which happens before upgrade
+
+directory_base="DIRECTORY_BASE"
+
+if [ -f /var/ossec/var/run/cyware-execd-*.pid ]; then
+    touch ${directory_base}/tmp/cyware.restart
+    ${directory_base}/bin/cyware-control stop > /dev/null 2>&1
+fi
+
+cp -a ${directory_base}/etc ${directory_base}/tmp/
+
+exit 0

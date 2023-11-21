@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# add something which happens after deinstall
+
+directory_base="DIRECTORY_BASE"
+
+# Remove the cyware user if it exists
+if id -u cyware > /dev/null 2>&1; then
+  deluser cyware > /dev/null 2>&1
+fi
+# Remove the cyware group if it exists
+if command -v getent > /dev/null 2>&1 && getent group cyware > /dev/null 2>&1; then
+  delgroup cyware > /dev/null 2>&1
+elif id -g cyware > /dev/null 2>&1; then
+  delgroup cyware > /dev/null 2>&1
+fi
+
+# Remove lingering folders and files
+rm -rf ${directory_base}
+
+exit 0

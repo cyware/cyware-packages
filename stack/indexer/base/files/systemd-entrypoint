@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Cyware-indexer base file
+# Copyright (C) 2022, KhulnaSoft Ltd.
+#
+# This program is a free software; you can redistribute it
+# and/or modify it under the terms of the GNU General Public
+# License (version 2) as published by the FSF - Free Software
+# Foundation.
+
+# This wrapper script allows SystemD to feed a file containing a passphrase into
+# the main Cyware-indexer startup script
+
+if [ -n "$WI_KEYSTORE_PASSPHRASE_FILE" ] ; then
+  exec /usr/share/cyware-indexer/bin/opensearch "$@" < "$WI_KEYSTORE_PASSPHRASE_FILE"
+else
+  exec /usr/share/cyware-indexer/bin/opensearch "$@"
+fi

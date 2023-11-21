@@ -1,0 +1,9 @@
+cyware-manager: embedded-library
+cyware-manager: embedded-zlib
+cyware-manager: possible-gpl-code-linked-with-openssl
+cyware-manager: new-package-should-close-itp-bug
+cyware-manager: possibly-insecure-handling-of-tmp-files-in-maintainer-script
+cyware-manager: non-standard-dir-in-var
+cyware-manager: file-in-unusual-dir
+cyware-manager: hardening-no-fortify-functions
+cyware-manager: hardening-no-relro

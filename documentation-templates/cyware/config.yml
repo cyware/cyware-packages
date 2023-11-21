@@ -1,0 +1,28 @@
+nodes:
+  # Cyware indexer nodes
+  indexer:
+    - name: node-1
+      ip: "<indexer-node-ip>"
+    #- name: node-2
+    #  ip: "<indexer-node-ip>"
+    #- name: node-3
+    #  ip: "<indexer-node-ip>"
+
+  # Cyware server nodes
+  # If there is more than one Cyware server
+  # node, each one must have a node_type
+  server:
+    - name: cyware-1
+      ip: "<cyware-manager-ip>"
+    #  node_type: master
+    #- name: cyware-2
+    #  ip: "<cyware-manager-ip>"
+    #  node_type: worker
+    #- name: cyware-3
+    #  ip: "<cyware-manager-ip>"
+    #  node_type: worker
+
+  # Cyware dashboard nodes
+  dashboard:
+    - name: dashboard
+      ip: "<dashboard-node-ip>"

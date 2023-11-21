@@ -1,0 +1,9 @@
+Welcome to the Cyware Agent Installer. 
+
+Cyware is a free, open-source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
+
+This package will install the Cyware agent in your system.
+
+Check out our documentation to learn more about Cyware, and join our community where our team and other users can help you.
+
+To continue, click Next. 

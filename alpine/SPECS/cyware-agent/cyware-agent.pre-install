@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# add something which happens before install
+
+directory_base="DIRECTORY_BASE"
+
+# Create the cyware group if it doesn't exists
+if command -v getent > /dev/null 2>&1 && ! getent group cyware > /dev/null 2>&1; then
+  addgroup -S cyware
+elif ! id -g cyware > /dev/null 2>&1; then
+  addgroup -S cyware
+fi
+# Create the cyware user if it doesn't exists
+if ! id -u cyware > /dev/null 2>&1; then
+  adduser -S -G cyware -h ${directory_base} -s /sbin/nologin cyware
+fi
+
+exit 0

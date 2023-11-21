@@ -1,0 +1,15 @@
+[Unit]
+Description=Cyware-indexer Performance Analyzer
+PartOf=cyware-indexer.service
+After=cyware-indexer.service
+
+[Service]
+ExecStart=/usr/share/cyware-indexer/bin/performance-analyzer-agent-cli
+Restart=on-failure
+User=cyware-indexer
+Group=cyware-indexer
+Environment=OPENSEARCH_HOME=/usr/share/cyware-indexer
+WorkingDirectory=/usr/share/cyware-indexer
+
+[Install]
+WantedBy=cyware-indexer.service

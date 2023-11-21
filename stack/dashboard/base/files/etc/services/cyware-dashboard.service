@@ -1,0 +1,15 @@
+[Unit]
+Description=cyware-dashboard
+
+[Service]
+Type=simple
+User=cyware-dashboard
+Group=cyware-dashboard
+EnvironmentFile=-/etc/default/cyware-dashboard
+EnvironmentFile=-/etc/sysconfig/cyware-dashboard
+ExecStart=/usr/share/cyware-dashboard/bin/opensearch-dashboards
+WorkingDirectory=/usr/share/cyware-dashboard
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,38 @@
+This work was packaged for Debian by:
+
+    Cyware, Inc <info@khulnasoft.com> on Tue, 21 Nov 2023 00:00:00 +0000
+
+It was downloaded from:
+
+    https://www.cyware.khulnasoft.com
+
+Upstream Authors:
+
+    dcid@dcid.me
+    Jia-BingJB_Cheng@trendmicro.com
+    vichargrave@gmail.com
+    ossec@michaelstarks.com
+    ddpbsd@gmail.com
+    scott@atomicorp.com
+    brad.lhotsky@gmail.com
+    jeremy@jeremyrossy.com
+    santiago.bassett@gmail.com
+    pedro@cyware.khulnasoft.com
+    alberto.rodriguez@cyware.khulnasoft.com
+    braulio@cyware.khulnasoft.com
+    jose.fernandez@cyware.khulnasoft.com
+
+Copyright:
+
+    GNU General Public License version 2.
+
+License:
+
+    GNU General Public License version 2.
+
+The Debian packaging is:
+
+    Copyright (C) 2015 Cyware, Inc <info@khulnasoft.com>
+
+and is licensed under the GPL version 2,
+see "/usr/share/common-licenses/GPL-2".

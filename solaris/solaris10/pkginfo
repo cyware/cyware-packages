@@ -1,0 +1,12 @@
+NAME=Cyware - Cyware unifies historically separate functions into a single agent and platform architecture. Providing protection for public clouds, private clouds, and on-premise data centers.
+PKG="cyware-agent"
+VERSION="4.9.0"
+ARCH="i386"
+CLASSES="none"
+CATEGORY="system"
+VENDOR="Cyware, Inc <info@khulnasoft.com>"
+PSTAMP="28Mar2024"
+EMAIL="info@khulnasoft.com"
+ISTATES="S s 1 2 3"
+RSTATES="S s 1 2 3"
+BASEDIR="/var/ossec/"

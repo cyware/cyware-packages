@@ -1,0 +1,10 @@
+nodes:
+  indexer:
+    - name: cyware-indexer
+      ip: localhost
+  server:
+    - name: cyware-server
+      ip: localhost
+  dashboard:
+    - name: cyware-dashboard
+      ip: localhost
